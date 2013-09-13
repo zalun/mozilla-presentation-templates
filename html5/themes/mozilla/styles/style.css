@@ -359,9 +359,9 @@ blockquote .quotesource {
 	position:absolute;
 	top:50%;
 	width:100%;
-	text-align:left;
 	line-height:1;
 	font-size:70px;
+	text-align: left;
 	-webkit-transform:translateY(-50%);
 	-moz-transform:translateY(-50%);
 	-ms-transform:translateY(-50%);
