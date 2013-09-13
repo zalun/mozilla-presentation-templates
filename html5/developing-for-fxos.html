@@ -98,8 +98,8 @@
            alt="Firefox OS" 
            class="middle" height="450">
     <footer class="notes">
-      Mozilla built Firefox OS - a new mobile operating system, completely based on open web technologies and aimed at the markets that others don't cover. Both fulfilling the promises made by other platforms and following the principles defined in the Mozilla Manifesto.<br/>
-      Please raise your hand if you have used Firefox OS<br/>
+      iOS and Android locked world is very hermetic. Mozilla built Firefox OS - a new mobile operating system, completely based on open web technologies and aimed at the markets that others don't cover. Both fulfilling the promises made by other platforms and following the principles defined in the Mozilla Manifesto.
+      Please raise your hand if you have used Firefox OS
     </footer>
     </section>
   </div></div>
@@ -111,6 +111,7 @@
       <img src="pictures/campuslon/internet.gif" 
            class="middle" 
            alt="Internet activity">
+   </header>
     <footer class="notes">
       Firefox OS will be officially released in 10 countries this year only. It is targetted to emerging markets to people who still use a feature phone. You can buy a phone in Poland for about 400zl without being locked in to any contract.
     </footer>
@@ -128,8 +129,8 @@
            class="middle"> 
     <footer class="notes">
       One of the main differences of Firefox OS to other platforms is that apps are indexable and can be categorised - as all they are is HTML. That way we were able to build a more intelligent search into the system. Instead of having to know the name of an app you enter what you are looking for. This could be a name of a band and you'd find music apps that have songs by the band. Or a ticket app where you can get concert tickets. We made app discovery as easy as surfing the web. The other benefit is that instead of having to download and install the apps you can try them out immediately and install them in a second step. It is a proper try before you buy.
-      <br/>
-      DEMO: Simulator - search for Dezzerter
+
+      DEMO: Simulator - search for Dezerter
     </footer>
     </section>
   </div></div>
@@ -148,8 +149,10 @@
         </a>
       </p>
     <footer class="notes">
-    You could say that Gonk is a very simple Linux distribution. It is lower level operating system of the Firefox OS platform, consisting of a Linux kernel and userspace hardware abstraction layer (HAL).<br/><br/>
-    Gecko includes, among other things, a networking stack, graphics stack, layout engine, a JavaScript virtual machine, and porting layers.<br/><br/>
+    You could say that Gonk is a very simple Linux distribution. It is lower level operating system of the Firefox OS platform, consisting of a Linux kernel and userspace hardware abstraction layer (HAL).
+
+    Gecko includes, among other things, a networking stack, graphics stack, layout engine, a JavaScript virtual machine, and porting layers.
+
     Gaia. The user interface of the Firefox OS platform. Anything drawn to the screen once Firefox OS is started up is a product of the Gaia layer.
     </footer>
     </section>
@@ -233,8 +236,10 @@
       <p><mark><strong>Privileged</strong></mark><br/>
       reviewed by the App store, packaged and signed</p>
       <p><mark><strong>Certified</strong></mark><br/>
-      part of the OS, only if you're providing the OS</p>
+      part of the OS, only for Mozilla and partners</p>
+      <p class="demourl"><a href=" https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Security/Security_model">Security model</a></p>
       <footer class="notes">
+      Display Web API page and explain that the access is color coded
       </footer>
     </section>
   </div></div>  
@@ -250,6 +255,30 @@
       </footer>
     </section>
   </div></div>  
+
+  <div id="activities" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web activities</h2>
+      </header>
+      <ul class="lots">
+        <li>configure</li>
+        <li>costcontrol</li>
+        <li>dial</li>
+        <li>open</li>
+        <li>pick</li>
+        <li>record</li>
+        <li>save-bookmark</li>
+        <li>share</li>
+        <li>view</li>
+        <li>new, f.e type: “websms/sms” or “webcontacts/contact” </li>
+      </ul>
+    <footer class="notes">
+      If you want to access the camera or the address book without packaging your application, there is an alternative called Web Activities. These are much like Web Intents were for Chrome, but more focused on real use cases of the web rather than Android. Using Web Activities you can access the hardware without having to authenticate on the user's behalf. Instead, the users get prompted to use the apps they always use to give you what your app wants.
+    </footer>
+    </section>
+  </div></div>
+
 
  <div id="callactivity" class="slide"><div>
     <section>
@@ -341,8 +370,8 @@
            alt="Simulator dashboard">
       </figure>     
       <footer class="notes">
-      Demo - show simulator and how one can install an app<br/>
-      Demo - show how an app can be profiled<br/>
+      Demo - show simulator and how one can install an app
+      Demo - show how an app can be profiled
       </footer>
     </section>
   </div></div>
@@ -350,7 +379,7 @@
   <div id="app-manager" class="slide"><div>
     <section>
       <header>
-        <h2>App Manager</h2>
+        <h2>App Manager (future)</h2>
       </header>
       <figure class="middle shadow">
       <img src="pictures/fxos/app-manager.png" 
@@ -364,30 +393,6 @@
       <footer class="notes">
       App manager is a new tool which aims to replace Simulator dashboard.
       </footer>
-    </section>
-  </div></div>
-
-  <div id="fiddle" class="slide cover"><div>
-    <section>
-      <header>
-        <h2>Prototyping with JSFiddle</h2>
-      </header>
-      <ol>
-        <li>Write your code as you might normally when making a JSFiddle
-        </li>
-        <li>Append <code>/webapp.manifest</code> to your Fiddle URL and paste this link into the Firefox OS simulator to install the app</li>
-        <li>Alternatively, append <code>/fxos.html</code> to your Fiddle URL to get an install page like a typical Firefox OS hosted application</li>
-      </ol> 
-      <p class="demourl">
-        <a href="https://hacks.mozilla.org/2013/08/using-jsfiddle-to-prototype-firefox-os-apps/">
-          Using JSFiddle to prototype Firefox OS Apps
-        </a>
-      </p>
-      <img src="pictures/jsfiddle/jsfiddle-desktop-light.png" 
-      class="middle">
-    <footer class="notes">
-      JSFiddle is a very simple way to create code collaboratively online. The latest version now also has the feature to publish the code you wrote as a Firefox OS app to test things out.
-    </footer>
     </section>
   </div></div>
 
@@ -428,7 +433,7 @@
            alt="Cordova on Simulator">
       </figure>     
       <footer class="notes">
-      
+      We're thinking how to lower the learning curve. I'm working on integrating Cordova. We're pretty close and the working alpha will be presented this month at the PhoneGap Day in Amsterdam      
       </footer>
     </section>
   </div></div>
@@ -448,7 +453,7 @@
         </a>
       </p>
       <footer class="notes">
-
+        DEMO
       </footer>
     </section>
   </div></div>
@@ -458,7 +463,7 @@
       <header>
         <h2>Developing with Brick (1/2)</h2>
       </header>
-      <p>HTML</p>
+      <p>Add a component</p>
       <pre>
         <code>&lt;x-flipbox&gt;</code>
         <code>  &lt;div&gt;I'm the front face.&lt;/div&gt;</code>
@@ -481,7 +486,7 @@
       <header>
         <h2>Developing with Brick (2/2)</h2>
       </header>
-      <p>Javascript</p>
+      <p>Use extended element in Javascript</p>
       <pre>
         <code>toggleButton.addEventListener("click", function(){</code>
         <code>  flipBox.toggle(); </code>
@@ -497,6 +502,31 @@
       </footer>
     </section>
   </div></div>
+
+  <div id="fiddle" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Prototyping with JSFiddle</h2>
+      </header>
+      <ol>
+        <li>Write your code as you might normally when making a JSFiddle
+        </li>
+        <li>Append <code>/webapp.manifest</code> to your Fiddle URL and paste this link into the Firefox OS simulator to install the app</li>
+        <li>Alternatively, append <code>/fxos.html</code> to your Fiddle URL to get an install page like a typical Firefox OS hosted application</li>
+      </ol> 
+      <p class="demourl">
+        <a href="https://hacks.mozilla.org/2013/08/using-jsfiddle-to-prototype-firefox-os-apps/">
+          Using JSFiddle to prototype Firefox OS Apps
+        </a>
+      </p>
+      <img src="pictures/jsfiddle/jsfiddle-desktop-light.png" 
+      class="middle">
+    <footer class="notes">
+      JSFiddle is a very simple way to create code collaboratively online. The latest version now also has the feature to publish the code you wrote as a Firefox OS app to test things out.
+    </footer>
+    </section>
+  </div></div>
+
 
   <div id="marketplace" class="slide"><div>
     <section>
@@ -576,7 +606,7 @@
         </a>
       </p>
       <footer class="notes">
-      Most of the time an app is to make money. You can do that with selling an app itself or by selling goods inside your app
+      Most of the time an app is to make money. You can do that with selling an app itself or by selling goods inside your app, JSON Web Token
       </footer>
     </section>
   </div></div>
@@ -586,16 +616,13 @@
       <header>
         <h2>Questions?</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <img src="pictures/fxos/nurek.jpg" class="right" alt="Classic Diving">
       <ul class="nobull">
         <li>Piotr Zalewa</li>
         <li>Senior Web Developer</li>
-        <li><a href="http://twitter.com/zalun/">@zalun</a></li>
-        <li><strong>Slides</strong>: <a href="http://zalun.github.io/mozilla-presentation-templates/developing-for-fxos.html">url</a></li>
+        <li>Twitter: <a href="http://twitter.com/zalun/">@zalun</a></li>
+        <li>Slides: <strong>bit.ly/fxos-smartdevcon</strong></li>
       </ul>
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
-      </small>
 
     <footer class="notes">
     </footer>
