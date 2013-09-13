@@ -391,7 +391,7 @@
     </section>
   </div></div>
 
-  <div id="remote-debugging" class="slide"><div>
+  <div id="prepareyourphone" class="slide"><div>
     <section>
       <header>
         <h2>Prepare your phone</h2>
@@ -409,19 +409,177 @@
   <div id="remote-debugging" class="slide"><div>
     <section>
       <header>
-        <h2>Prepare your phone</h2>
+        <h2>Access to the console</h2>
       </header>
-      <p>Go into settings and<br/>
-      Device Information &gt; More Information &gt; Developer<br/>
-      Switch on the <strong>Remote debugging</strong></p>
-      <p>Linux users should also <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">configure udev rule</a></p>
+      <p><code>adb logcat | grep JS</code></p>
       <footer class="notes">
+      Until App Manager will be released (Firefox 26 and FxOS 1.2) this is the only way to receive information from the device
       </footer>
     </section>
   </div></div>  
 
+  <div id="cordova" class="slide"><div>
+    <section>
+      <header>
+        <h2>Cordova on Firefox OS</h2>
+      </header>
+      <figure class="right shadow">
+      <img src="pictures/fxos/cordova-fxos.png" 
+           alt="Cordova on Simulator">
+      </figure>     
+      <footer class="notes">
+      
+      </footer>
+    </section>
+  </div></div>
 
+  <div id="app-designer" class="slide"><div>
+    <section>
+      <header>
+        <h2>What You See Is What You (might) Get</h2>
+      </header>
+      <figure class="middle shadow">
+      <img src="pictures/fxos/app_designer.png" 
+           alt="App Designer">
+      </figure>     
+      <p class="demourl">
+        <a href="http://flathead.herokuapp.com/designer">
+          App designer website
+        </a>
+      </p>
+      <footer class="notes">
 
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="brick1" class="slide"><div>
+    <section>
+      <header>
+        <h2>Developing with Brick (1/2)</h2>
+      </header>
+      <p>HTML</p>
+      <pre>
+        <code>&lt;x-flipbox&gt;</code>
+        <code>  &lt;div&gt;I'm the front face.&lt;/div&gt;</code>
+        <code>  &lt;div&gt;And I'm the back face.&lt;/div&gt;</code>
+        <code>&lt;/x-flipbox&gt;</code>
+      </pre>
+      <p class="demourl">
+        <a href="http://mozilla.github.io/brick/">
+          Brick website
+        </a>
+      </p>
+      <footer class="notes">
+        Based on web components
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="brick2" class="slide"><div>
+    <section>
+      <header>
+        <h2>Developing with Brick (2/2)</h2>
+      </header>
+      <p>Javascript</p>
+      <pre>
+        <code>toggleButton.addEventListener("click", function(){</code>
+        <code>  flipBox.toggle(); </code>
+        <code>});</code>
+      </pre>
+      <p class="demourl">
+        <a href="http://mozilla.github.io/brick/">
+          Brick website
+        </a>
+      </p>
+      <footer class="notes">
+
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="marketplace" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mozilla Marketplace</h2>
+      </header>
+      <figure class="middle shadow">
+      <img src="pictures/fxos/marketplace.png" 
+           alt="Mozilla Marketplace">
+      </figure>     
+      <p class="demourl">
+        <a href="http://marketplace.firefox.com/">
+          Firefox Marketplace 
+        </a>
+      </p>
+      <footer class="notes">
+      
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="app_submission" class="slide"><div>
+    <section>
+      <header>
+        <h2>Submitting an app</h2>
+      </header>
+      <ul>
+        <li>Navigate to <A href="https://marketplace.firefox.com/developers/">Marketplace for developers</a></li>
+        <li>Click on Submit an app</li>
+        <li>Provide hosted app URL or upload a zip</li>
+        <li>Fill in the details</li>
+        <li>Wait for approval, you can also change data and upload new versions.</li>
+      </ul>     
+      <footer class="notes">
+      You might be asked to authenticate. It's using Persona.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="installapp" class="slide"><div>
+    <section>
+      <header>
+        <h2>Install apps from the web (hosted)</h2>
+      </header>
+        <pre>
+        <code>var installApp = navigator.mozApps.install(manifestURL);</code>
+        <code>installApp.onsuccess = function(data) {</code>
+        <code>  // App is installed</code>
+        <code>};</code>
+        <code>installApp.onerror = function() {</code>
+        <code> // App wasn't installed, info is in </code>
+        <code> // installApp.error.name</code>
+        <code>};</code>
+        </pre>
+      <footer class="notes">
+        Installing applications from the web is possible by using the open web apps API, which is part of the WebAPI work in Mozilla. You can test if navigator.mozApps is supported and then create a button that calls the install method pointing to the URL of the manifest file of the app to be installed. You then get onsuccess and onerror handlers to deal with the returned objects of the install process. This means that any mobile friendly web site can be turned into an app in a few minutes, and that all the work you put into making your sites found in search engines wasn't wasted, but actually is now advertising for your app.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="in-app-payment" class="slide"><div>
+    <section>
+      <header>
+        <h2>In-app payments</h2>
+      </header>
+      <ul>
+        <li>app calls <code>navigator.mozPay()</code> using signed JWT</li>
+        <li>Buyer logs-in, enters her PIN</li>
+        <li>app receives a callback</li>
+        <li>app <strong>server</strong> receives a signed POST request</li>
+        <li>You receive money directly deposited to your bank account</li>
+
+      </ul>     
+      <p class="demourl">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/In-app_payments">
+          In-app payments API
+        </a>
+      </p>
+      <footer class="notes">
+      Most of the time an app is to make money. You can do that with selling an app itself or by selling goods inside your app
+      </footer>
+    </section>
+  </div></div>
   <!--
     To hide progress bar from entire presentation
     just remove “progress” element.
