@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Firefox OS and Cordova</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Firefox OS and Cordova</h1>
+    <p class="footer">
+      Piotr Zalewa, 
+      <a href="http://twitter.com/zalun">@zalun</a>,
+      <a href="mailto:zalun@mozilla.com">zalun@mozilla.com</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This talk is about explaining what Cordova is and answer the questions why, and how to use it for developing for Firefox OS. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+      <ul>
+        <li>Short introduction to web apps</li>
+        <li>What is Cordova?</li>
+        <li>Using App Manager</li>
+        <li>Flambe - Another cross platform solution</li>
+      </ul>
+    </p>
+  </aside>
+
+<!-- 
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="main" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Firefox OS and Cordova</h2>
+      </header>
+      <img src="pictures/cordova-ffos/ffos-cordova.png" 
+           class="middle shadow" 
+           alt="logos combined">
+      <small class="byline">
+        Piotr Zalewa, Mozilla, Frontend Meetup, Budapest, 2014/05/29
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <!-- ============= Webapps Introduction ================ -->
+
+    <div id="zomgapis" class="slide shout">
+        <div>
+            <section>
+                <header>
+                    <h2>Webapps Intro</h2>
+                </header>
+                <footer class="notes">
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <div id="manifest" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Manifest</h2>
+                </header>
+                <pre>
+        <code>{</code>
+        <code>  "name": "My App",</code>
+        <code>  "description": "My elevator pitch goes here",</code>
+        <code>  "launch_path": "/",</code>
+        <code>  "icons": { "128": "/img/icon-128.png" },</code>
+        <code>  "developer": {</code>
+        <code>    "name": "Your name or organization",</code>
+        <code>    "url": "http://your-homepage-here.org"</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+                <p class="demourl"><a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest">App manifest</a>
+                </p>
+                <footer class="notes">
+                    The main step to turn an HTML5 page/app into a Firefox App is to define an app manifest. These are simple files in JSON defining the name of your app, where the icons are and what permissions you need for the application to work. They need to be sent
+                    with the right MIME type on the server and get submitted to the Mozilla marketplace. See them as a quick description of your app.
+                </footer>
+            </section>
+        </div>
+    </div>
+ </div>
+
+  <div id="hosted" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Hosted</h2>
+      </header>
+      <img src="pictures/cordova-ffos/hosted.jpg" 
+           class="middle shadow" 
+           alt="a few hosts">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="packaged" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Packaged</h2>
+      </header>
+      <img src="pictures/cordova-ffos/packaged.jpg" 
+           class="middle shadow" 
+           alt="packaged fish">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="privileged" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>type: privileged</h2>
+      </header>
+      <img src="pictures/cordova-ffos/privileged1.jpg" 
+           class="middle shadow" 
+           alt="Enjoy small privileges">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+<!-- end slide block -->
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Questions?</h2>
+      </header>
+      <img src="pictures/fxos/nurek.jpg" class="right shadow" alt="Classic Diving">
+      <ul class="nobull">
+        <li>Piotr Zalewa</li>
+        <li>Senior Web Developer</li>
+        <li>Twitter: <a href="http://twitter.com/zalun/">@zalun</a></li>
+        <li>Slides: <strong>bit.ly/cordova-budapest</strong></li>
+      </ul>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
