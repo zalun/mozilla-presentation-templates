@@ -123,6 +123,44 @@
     </section>
   </div></div>
 
+    <div id="webapilist" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Web APIs (hosted apps)</h2>
+                </header>
+                <ul class="inline">
+                    <li>Vibration API</li>
+                    <li>Screen Orientation</li>
+                    <li>Geolocation API</li>
+                    <li>Open WebApps</li>
+                    <li>Network Information API</li>
+                    <li>Battery Status API</li>
+                    <li>Alarm API</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Simple_Push/">Push API (1.1)</a>
+                    </li>
+                    <li>Notifications API</li>
+                    <li>WebFM API / FMRadio</li>
+                    <li><a href="https://hacks.mozilla.org/2013/11/implementing-in-app-payments-in-your-firefox-os-app/">WebPayment</a>
+                    </li>
+                    <li>IndexedDB</li>
+                    <li>Archive API</li>
+                    <li>Ambient light sensor</li>
+                    <li>Proximity sensor</li>
+                    <li>Pointer Lock API</li>
+                    <li>File Handle API</li>
+                    <li>Web Activities</li>
+                </ul>
+                <p class="demourl">
+                    <a href="https://hacks.mozilla.org/2013/02/using-webapis-to-make-the-web-layer-more-capable/">Using WebAPIs to make the web layer more capable</a>
+                </p>
+                <footer class="notes">
+                    Hosted applications, meaning HTML5 apps you run on your own server, get the full functionality of HTML5 and additional API support shown here. All of these APIs are defined on the Mozilla Wiki and proposals to the standard bodies. Some of them have already
+                    been implemented in other other browsers, like the geolocation API. For now, however, only Firefox OS gives you all of them. These APIs bring much needed extra functionality to the HTML5 stack.
+                </footer>
+            </section>
+        </div>
+    </div>
   <div id="packaged" class="slide cover w"><div>
     <section>
       <header>
@@ -153,8 +191,142 @@
     </section>
   </div></div>
 
-<!-- end slide block -->
+    <div id="webapilistprivileged" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Web APIs (privileged apps)</h2>
+                </header>
+                <ul>
+                    <li>Device Storage API</li>
+                    <li>Browser API</li>
+                    <li>TCP Socket API</li>
+                    <li>Contacts API</li>
+                    <li>systemXHR</li>
+                </ul>
+                Need type set in manifest.webapp
+                <pre>
+        <code> "type": "privileged"</code>
+      </pre> 
+                <p class="demourl">
+                    <a href="https://hacks.mozilla.org/2013/02/using-webapis-to-make-the-web-layer-more-capable/">Using WebAPIs to make the web layer more capable</a>
+                </p>
+                <footer class="notes">
+                    Privileged apps have access to more APIs and those dealing with content of more sensitive nature like storing information on the device's file system, accessing the contacts list or loading third party data from the web. To recap, privileged apps need
+                    to be packaged up, submitted to the marketplace and delivered from Mozilla's infrastructure. We can not allow just any server on the web to access the user's address book as that would allow the creation of malware in a very easy fashion.
+                </footer>
+            </section>
+        </div>
+    </div>
 
+  <!-- ============= What is cordova ================ -->
+
+    <div id="whatiscordova" class="slide shout">
+        <div>
+            <section>
+                <header>
+                    <h2>What is Cordova?</h2>
+                </header>
+                <footer class="notes">
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <div id="brianquote" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Purpose</h2>
+                </header>
+                <blockquote>We want the web to be a first class platform and we often state a purpose of the project is to cease to exist</blockquote>
+      <small class="byline">
+        Brian Leroux, Adobe's PhoneGap leader
+      </small>
+            </section>
+        </div>
+    </div>
+
+  <div id="notperfect" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>This is not a perfect solution</h2>
+      </header>
+      <img src="pictures/cordova-ffos/quirks.png" 
+           class="middle shadow" 
+           alt="Quirks">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="demohelloworld" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Demo</h2>
+      </header>
+      <img src="pictures/cordova-ffos/helloworld.jpg" 
+           class="middle shadow" 
+           alt="Firefox OS - be the future">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+  <!-- ============= App manager ================ -->
+
+  <div id="appmanager" class="slide cover w"><div>
+    <section>
+      <img src="pictures/cordova-ffos/appmanager.png" 
+           class="middle shadow" 
+           alt="App Manager">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+  <!-- ============= Other cross platform ================ -->
+
+  <div id="flambe" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Flambe for game developers</h2>
+      </h2>
+      <img src="pictures/cordova-ffos/flambe.jpg" 
+           class="middle shadow" 
+           alt="Flambe">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+    <div id="flambe2" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Flambe Firefox OS Support</h2>
+                </header>
+                <img src="pictures/cordova-ffos/flambe.png" class="right" height="450" alt="Cordova Firefox OS Example">
+                <ol>
+                    <li>Haxe</li>
+                    <li>Used by Nickelodeon</li>
+                    <li>Accelerometer</li>
+                    <li>Simple Asset Loading</li>
+                    <li>Physics Library</li>
+                    <li>Touch Support</li>
+                    <li>Scene Management</li>
+                </ol>
+                <p class="demourl">
+                    <a href="https://github.com/aduros/flambe">Flambe</a>
+                    <a href="https://hacks.mozilla.org/2014/03/flambe-provides-support-for-firefox-os/">Firefox OS Flambe</a>
+                </p>
+
+            </section>
+        </div>
+    </div>
+
+  <!-- ============= Thanks ================ -->
+    
   <div id="thanks" class="slide"><div>
     <section>
       <header>

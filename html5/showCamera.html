@@ -1,0 +1,30 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<video autoplay></video>
+
+<script>
+  var errorCallback = function(e) {
+    console.log('Reeeejected!', e);
+  };
+
+  // Not showing vendor prefixes.
+  navigator.getUserMedia  = navigator.getUserMedia ||
+                            navigator.webkitGetUserMedia ||
+                            navigator.mozGetUserMedia ||
+                            navigator.msGetUserMedia;
+
+  var video = document.querySelector('video');
+
+  if (navigator.getUserMedia) {
+    navigator.getUserMedia({audio: false, video: true}, function(stream) {
+      video.src = window.URL.createObjectURL(stream);
+    }, errorCallback);
+  }
+
+
+</script>
+</body>
