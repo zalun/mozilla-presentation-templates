@@ -260,6 +260,31 @@
     </section>
   </div></div>  
 
+    <div id="cordovacommands" class="slide">
+        <div>
+            <section>
+                <header>
+                    <h2>Firefox OS App With Cordova</h2>
+                </header>
+                <pre>
+    <code>$ sudo npm install -g cordova</code>
+    <code>$ cordova create hello com.example.hello HelloWorld</code>
+    <code>$ cd hello</code>
+    <code>$ cordova platform add firefoxos</code> 
+    <code>$ cordova prepare firefoxos</code>
+    <code>//add device specific plugins</code>
+    <code>$ cordova plugin add org.apache.cordova.geolocation</code> 
+      </pre>
+                <p class="demourl">
+                    <a href="https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/">Building Cordova apps for Firefox OS</a>
+                </p>
+                <footer class="notes">
+                    To retrieve the photo all you need is a simple event handler in which you get the image as a data blob and you can play with it in your app.
+                </footer>
+            </section>
+        </div>
+    </div>
+
   <div id="demohelloworld" class="slide cover w"><div>
     <section>
       <header>
@@ -285,6 +310,51 @@
     </section>
   </div></div>  
 
+  <!-- ============= Brick ================ -->
+
+  <div id="brick" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Brick</h2>
+      </header>
+      <img src="pictures/cordova-ffos/brick.jpg" 
+           class="middle shadow" 
+           alt="Brick">
+      <small class="byline">
+        <a href="http://mozilla.github.io/brick/">mozilla.github.io/brick/</a>
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>  
+
+
+
+  <!-- ============= JSFiddle ================ -->
+
+  <div id="fiddle" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Prototyping with JSFiddle</h2>
+      </header>
+      <ol>
+        <li>Write your code as you might normally when making a JSFiddle
+        </li>
+        <li>Append <code>/manifest.webapp</code> to your Fiddle URL and paste this link into the Firefox OS simulator to install the app</li>
+        <li>Alternatively, append <code>/fxos.html</code> to your Fiddle URL to get an install page like a typical Firefox OS hosted application</li>
+      </ol> 
+      <p class="demourl">
+        <a href="https://hacks.mozilla.org/2013/08/using-jsfiddle-to-prototype-firefox-os-apps/">
+          Using JSFiddle to prototype Firefox OS Apps
+        </a>
+      </p>
+      <img src="pictures/jsfiddle/jsfiddle-desktop-light.png" 
+      class="middle">
+    <footer class="notes">
+      JSFiddle is a very simple way to create code collaboratively online. The latest version now also has the feature to publish the code you wrote as a Firefox OS app to test things out.
+    </footer>
+    </section>
+  </div></div>
   <!-- ============= Other cross platform ================ -->
 
   <div id="flambe" class="slide cover w"><div>
@@ -325,6 +395,37 @@
         </div>
     </div>
 
+
+  <!-- ============= Back to Cordova ================ -->
+
+  <div id="mozcor" class="slide cover w"><div>
+    <section>
+      <img src="pictures/cordova-ffos/mozilla-cordova.png" 
+           class="middle shadow" 
+           alt="Firefox OS - be the future">
+      <footer class="notes">
+      </footer>
+      <small class="byline">
+        <a href="https://mozilla-cordova.github.io/">mozilla-cordova.github.io</a>
+      </small>
+    </section>
+  </div></div>  
+
+  <div id="mozcorplugins" class="slide cover w"><div>
+    <section>
+      <img src="pictures/cordova-ffos/plugin-support.png" 
+           class="middle shadow" 
+           alt="Firefox OS - be the future">
+      <footer class="notes">
+      </footer>
+      <small class="byline">
+        <a href="https://mozilla-cordova.github.io/">mozilla-cordova.github.io</a>
+      </small>
+    </section>
+  </div></div>  
+
+
+
   <!-- ============= Thanks ================ -->
     
   <div id="thanks" class="slide"><div>
@@ -335,7 +436,7 @@
       <img src="pictures/fxos/nurek.jpg" class="right shadow" alt="Classic Diving">
       <ul class="nobull">
         <li>Piotr Zalewa</li>
-        <li>Senior Web Developer</li>
+        <li>Mozilla</li>
         <li>Twitter: <a href="http://twitter.com/zalun/">@zalun</a></li>
         <li>Slides: <strong>bit.ly/cordova-budapest</strong></li>
       </ul>
